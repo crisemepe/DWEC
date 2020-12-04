@@ -1,0 +1,66 @@
+{ 
+    "actividades": [
+    {
+        "id_act":1,
+        "titulo":"Quedada para hacer surf",
+        "foto":"./img/surf.jpg",
+        "fecha":"16-08-2020",
+        "sitio":"Daimús",
+        "descripcion":"Quedada en grupo para prácticar surf Nivel Principiante. Consta de 1h de clase y 1h de actividad libre. El precio serán 20€ y se incluye todo el material necesario. Deberás traer bañador y chanclas, y estar a las 10:00 en el centro de surf Ohana",
+        "plazas":10,
+        "precio":20.00
+    }, 
+    {
+        "id_act":2,
+        "titulo":"Rafting en grupo",
+        "foto":"./img/rafting.jpg",
+        "fecha":"08-09-2020",
+        "sitio":"Venta del Moro",
+        "descripcion":"Mañana de rafting o descenso de rapidos en el rio Cabriel, descenderemos 8km. Nivel de dificultad Media, requisito indispensable: saber nadar. El precio será 25€ y se incluye todo el material. Los grupos de barca serán de 8 y los de canoa de 2. Deberás traer ropa de baño y zapatillas sumergibles, o deportivas viejas. Saldremos desde el parking de Multiaventura. ",
+        "plazas":15,
+        "precio":25.00
+    }, 
+    {
+        "id_act":3,
+        "titulo":"Excursión Chulilla",
+        "foto":"./img/chulilla.png",
+        "fecha":"12-10-2020",
+        "sitio":"Chulilla",
+        "descripcion":"Excursión para pasar el dia. Ruta de los puentes colgantes de Chulilla. La tasa para la ruta es de 1€. Se recomienda traer calzado comodo, y ropa de montaña, mochila con agua y comida  y , opcionalmente, palos de senderismo y camara de fotografia. No se recomienda esta actividad a gente con miedo a las alturas o vertigo. La ruta tiene una duración de 4h pero se puede alargar, o volver, a voluntad. ",
+        "plazas":"",
+        "precio":1.00
+
+    }, 
+    {
+        "id_act":4,
+        "titulo":"Blanc! Festival",
+        "foto":"./img/blanc.jpg",
+        "fecha":"23-10-2020",
+        "sitio":"Barcelona",
+        "descripcion":"Quedada para acudir al Blanc! Festival de diseño, creatividad y innovación de Barcelona. Pasaremos el dia en el festival, iremos a las masterclass y charlas que mas nos interesen, y comeremos juntos en un restaurante cercano. La entrada puede ser de un dia o de ambos, y cada usuario se encargará de su acreditación y entrada. ",
+        "plazas":"",
+        "precio":""
+
+    }, 
+    {
+        "id_act":5,
+        "titulo":"Cena Exótica en Voltereta Bali",
+        "foto":"./img/voltereta.jpg",
+        "fecha":"6-11-2020",
+        "sitio":"Valencia",
+        "descripcion":"Cena en Voltereta, un rinconcito de Bali en Valencia Capital. Restaurante diferente ubicado en Gran Via del Amrques del Turia nº59, una selva con plantas, un puente y mucha decoración en su interior, tienen muy cuidada su imagen y decoración para que recuerde a Indonesia. Tipo de cocina. Mediterranea, Española, Asiatica, Tailandesa, Indonesia.",
+        "plazas":6,
+        "precio":""
+    }, 
+    {
+        "id_act":6,
+        "titulo":"Fin de semana en la Nieve",
+        "foto":"./img/nieve.jpg",
+        "fecha":"12-12-2020",
+        "sitio":"Andorra",
+        "descripcion":"Excursión a la nieve para un fin de semana, con autobus y salidas desde diferentes ciudades. Esquiaremos en Grand Valira en el sector Encamp, nos alojaremos en un hotel a pie de pistas, y se incluira desayuno y cena en el hotel. El precio es de 450€ con forfait para ambos dias y alquiler de material, y 370€ con forfait y sin alquiler de material. ",
+        "plazas":45,
+        "precio":370.00
+    }
+ ]
+}

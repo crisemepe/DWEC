@@ -1,0 +1,55 @@
+{ 
+    "intereses": [     
+    {
+       "gustos": "geek",
+       "aficiones": "videojuegos",
+       "habitos":"gamer",
+       "personalidad":"introvertido/a",
+       "profesion":"informatico/a"
+    },
+    {
+       "gustos": "aire libre",
+       "aficiones": "deporte",
+       "habitos":"runner",
+       "personalidad":"extrovertido/a",
+       "profesion":"repartidor/a"
+    },
+    {
+       "gustos": "animales",
+       "aficiones": "dibujo",
+       "habitos":"vegan",
+       "personalidad":"curioso/a",
+       "profesion":"ilustrador/a"
+    },
+    {
+       "gustos": "libros",
+       "aficiones": "idiomas",
+       "habitos":"lector/a",
+       "personalidad":"calmado/a",
+       "profesion":"profesor/a"
+    },
+    {
+       "gustos": "gastronomia",
+       "aficiones": "cocina",
+       "habitos":"cuidador/a",
+       "personalidad":"amable",
+       "profesion":"enfermero/a"
+    },
+    {
+       "gustos": "turismo",
+       "aficiones": "viajar",
+       "habitos":"cambios",
+       "personalidad":"inquieto/a",
+       "profesion":"azafato/a"
+    },
+    {
+       "gustos": "conciertos",
+       "aficiones": "musica",
+       "habitos":"bailar",
+       "personalidad":"social",
+       "profesion":"estudiante"
+    }
+    
+
+    ]
+}
