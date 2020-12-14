@@ -8,9 +8,10 @@ html {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	overflow: hidden;
+	background-position:bottom center;
 }
-  
+
+
 
 #logueado {
     text-decoration: none;
@@ -27,7 +28,7 @@ html {
    border: solid 1px transparent;
 }
 
-.boton-log {
+.boton-logout {
   padding: 0.3em 0.8em;
   margin:0.8em;
   border-radius: .35rem;
@@ -37,7 +38,7 @@ html {
   text-decoration: none;
 }
 
-.boton-log:hover, .boton-log:focus {
+.boton-logout:hover, .boton-log:focus {
   color: white;
   text-decoration: none;
     
@@ -45,7 +46,7 @@ html {
   text-shadow: 3px 2px 1px #3a1222;
  
 }
-.boton-log a:link, a:visited, a:active {
+.boton-logout a:link, a:visited, a:active {
     text-decoration:none;
 }
 
@@ -53,17 +54,12 @@ html {
 	background: transparent;
 }
 
-.logo-central{
-    display:flex;
-	margin: auto;
-	width:350px; 
-}
-
 .superior {
-	z-index: 100px;
+	z-index: 100;
 }
 /**********************************************************************************************/ 
 /*CSS Login*/
+/**********************************************************************************************/ 
 
 .img-log{
 	display: block;
@@ -98,7 +94,7 @@ html {
 	bottom: 0;
 	margin: auto;
 	width: 260px;
-	height: 260px;
+	height: 280px;
 	border-radius: 5px;
 	/*background: rgba(3,3,3,0.25);*/
 	box-shadow: 1px 1px 50px #ffffff;
@@ -274,17 +270,18 @@ html {
 
 /**********************************************************************************************/ 
 /*CSS Home */
+/**********************************************************************************************/ 
+
 .wrapper {
-	background: #dbb3bc;
 	height: 100%;
 }
 
-p {
+.homep {
 font-size: 0.6em;
-color: #ffffff;
+color: #fbd6d6;
 }
 
-h3 {
+.homeh3 {
 	margin-top: -50px;
 	padding: 0px 20px 0px 20px;
 	font-size: 1.3em;
@@ -299,7 +296,7 @@ h3 {
 	left: 0;
 	height: 100vh;
 	min-height: 580px;
-	background: #dbb3bc;
+	background: #f8cdd7;
 	text-align:center;
 	display:block;
 }
@@ -315,27 +312,33 @@ h3 {
 
 .sidebar-menu{
 	font-size: 15pt;
+	color: #bd777c;
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 2em;
 }
-.sidebar-menu>p{
+p.link{
 	cursor: pointer;
-
+	font-size: 1rem;
 }
 .sidebar-contenido {
 	padding: 2px 40px 0px 40px;
-	color: #ffffffb9;
+	color: #525252;
 
 }
 
 .sidebar-footer {
-	padding: 20px; 
+	padding-top: 30%; 
 	display: flex;
-	flex-direction: row;
+	justify-content: space-around;
 }
 
 
 
 /**********************************************************************************************/ 
 /*CSS Menu*/
+/**********************************************************************************************/ 
 
 .logo-peque {
 	width: 150px;
@@ -349,38 +352,40 @@ h3 {
 
 /**********************************************************************************************/ 
 /*CSS Actividades*/
+/**********************************************************************************************/ 
 
-@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-:root {
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: 'Rubik', sans-serif;
-  --font-serif: 'Cardo', serif;
-}
 
 .actList{
 	padding: 2%;
 	margin: 2%;
-	display:flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	box-sizing: border-box;
-	display: grid;
- 	place-items: center;
+	display: flex;
+	 place-items: center;
+	 background: transparent;
 }
 
 .act-content{
-	display: grid;
+  display: grid;
   grid-gap: 1rem;
   padding: 1rem;
   max-width: 1024px;
   margin: 0 auto;
-  font-family: var(--font-sans);
+  background: transparent;
 }
 
 @media (min-width: 600px) {
 	.act-content {
 	  grid-template-columns: repeat(2, 1fr);
+	}
+	html {
+		background: url(/Graficos/FondoNuevo.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position:bottom center;
 	}
 }
 
@@ -396,7 +401,7 @@ h3 {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-align: end;
-			align-items: flex-end;
+	align-items: flex-end;
 	overflow: hidden;
 	padding: 1rem;
 	width: 100%;
@@ -445,22 +450,31 @@ h3 {
 	transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
   }
   .act-card:nth-child(1):before {
-	background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+	background-image: url(/Graficos/img/surf.jpg);
   }
 
   .act-card:nth-child(2):before {
-	background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+	background-image: url(/Graficos/img/rafting.jpg);
   }
   .act-card:nth-child(3):before {
-	background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+	background-image: url(/Graficos/img/chulilla.jpg);
   }
   .act-card:nth-child(4):before {
-	background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+	background-image: url(/Graficos/img/blanc.jpg);
   }
-  
+  .act-card:nth-child(5):before {
+	background-image: url(/Graficos/img/voltereta.jpg);
+  }
+  .act-card:nth-child(6):before {
+	background-image: url(/Graficos/img/nieve.jpg);
+  }
+
+
+
   .act-contenido {
 	position: relative;
 	display: -webkit-box;
+	background: transparent;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -476,20 +490,18 @@ h3 {
 	z-index: 1;
   }
   .act-contenido > * + * {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
   }
   
   .act-title {
 	font-size: 1.3rem;
 	font-weight: bold;
-	line-height: 1.2;
+	color: #bd777c;
   }
   
   .act-copy {
-	font-family: var(--font-serif);
-	font-size: 1.125rem;
+	font-size: 0.8rem;
 	font-style: italic;
-	line-height: 1.35;
   }
   
   .act-btn {
@@ -501,7 +513,7 @@ h3 {
 	letter-spacing: 0.025rem;
 	text-transform: uppercase;
 	color: white;
-	background-color: black;
+	background-color: #bd777c;
 	border: none;
   }
   .act-btn:hover {
@@ -570,7 +582,69 @@ h3 {
   }
   
 
+  /**********************************************************************************************/ 
+  /* CSS USUARIOS */
+  /**********************************************************************************************/ 
 
+  .userList{
+	  max-width: 1024px;
+	  background: transparent;
+	  
+  }
+
+  .usuario1{
+	margin-left: 20%;
+	margin-right: 20%;
+	
+  }
+  
+  .usuario2{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 2rem;
+	padding: 1rem;
+	margin: 0 auto;
+
+  }
+  .users{
+	 width:auto;
+	 box-shadow: 5px 7px 7px #999999;
+	 border-radius: 10px;
+	 padding: 0.5rem;
+
+  }
+
+  .botones-users{
+	  justify-content: space-around;
+	  display: flex;
+	  margin: 0.8rem;
+
+  }
+
+  .icono-interes{
+	  width:50px;
+  }
+
+  .btnuser{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .btn-nuser{
+	 cursor: pointer;
+	 font-weight: bold;
+	 padding-top: 1rem;
+	 padding-bottom: 1rem;
+	 margin: 2em;
+	 border: none;
+	 border-radius: 15px;
+	 background-color: #bd777c;
+	 color: white;
+	 font-size: 14px; 
+  }
 
 
 

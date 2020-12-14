@@ -1,5 +1,4 @@
-{ 
-    "actividades": [
+[
     {
         "id_act":1,
         "titulo":"Quedada para hacer surf",
@@ -62,5 +61,4 @@
         "plazas":45,
         "precio":370.00
     }
- ]
-}
+]

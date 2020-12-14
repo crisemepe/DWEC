@@ -1,5 +1,6 @@
-export{dibujaLogin, dibujaHome, dibujaMenu};
-import { Page} from "../pages.js"
+export{dibujaLogin, dibujaHome, dibujaMenu, dibujaLogOut};
+import {deleteAllCookies} from "../cookies.js"; 
+import {Page} from "../pages.js"
 
 
 function dibujaLogin() {
@@ -15,9 +16,10 @@ function dibujaLogin() {
     </span>
   
     <form>
-      <input type="text" name="usuario" placeholder="Usuario">
-      <input type="password" name="pass" placeholder="Contraseña">
+      <input type="text" name="usuario" placeholder="Usuario" value="">
+      <input type="password" name="pass" placeholder="Contraseña" value="">
       <a class="a-log boton-inicio">Inicia Sesión</a>
+      <a class="a-log boton-regis">Registrate</a>
       <div id="remember-container">
         <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
         <span id="remember">Recuerdame</span>
@@ -42,7 +44,27 @@ function dibujaLogin() {
   log.innerHTML = loginPag;
 }
 
+function dibujaLogOut(){
+    let logout = `
+    <div id="cabecera">
+    <div id="logueado">
+    <div class="botones-log">
+    <a class="boton-logout" style="text-decoration:none;"> Logout </a>
+    </div>
+    </div>
+    </div>
+    `;
+      let header = document.querySelector('#header');
+      header.innerHTML = logout;
 
+    setTimeout(() => {
+        Array.from(document.querySelectorAll(".boton-logout")).forEach(element => {
+              element.addEventListener('click', function (l){
+                  deleteAllCookies();
+                })
+            })
+    },50);
+}
 
 function dibujaMenu(){
 
@@ -65,10 +87,7 @@ function dibujaMenu(){
             <a class="nav-link">Usuarios</a>
         </li>
     </ul>
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"> Buscar</button>
-    </form>
+   
 </div>
 </nav> </div>`;
 
@@ -79,13 +98,34 @@ function dibujaMenu(){
 
       setTimeout(() => {
           Array.from(document.querySelectorAll(".nav-link")).forEach(element => {
-              element.addEventListener('click', function (e){
-                Page.mostrarPagina(this.innerHtml); //esto da error
+                element.addEventListener('click', function (e){
+                    console.log(e.target.innerHTML);
+                    if(e.target.innerHTML=="Perfil"){
+                        Page.mostrarPagina("Perfil");
+                    }else if (e.target.innerHTML=="Inicio"){
+                        Page.mostrarPagina("Inicio");
+                    }else if (e.target.innerHTML=="Eventos"){
+                        Page.mostrarPagina("Eventos");
+                    } else if (e.target.innerHTML=="Usuarios"){
+                        Page.mostrarPagina("Usuarios");
+                    } else {
+                        console.log("Error en el selector")
+                    }
               })
           })
       },50);
 }
 
+/*function dibujarBuscar(){
+    let buscar=`<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"> Buscar</button>
+    </form>`;
+
+    let barramenu = document.querySelector("#navbarColor03");
+    barramenu.appendChild(buscar);
+}
+*/
 
 function dibujaHome(){
   let home = ` <div class="wrapper">
@@ -95,7 +135,7 @@ function dibujaHome(){
           <img src="Graficos/MadBangLogo.gif">
       </div>
       <div class="sidebar-contenido">
-          <p> <h3>Te damos la bienvenida a esta gran familia, $NombreUser! </h3>
+          <p class="homep"> <h3 class="homeh3">Te damos la bienvenida a esta gran familia, $NombreUser! </h3>
               Ayudamos a conectar con la gente, con la ciudad, con tu trabajo...
               Prometemos ayudarte a disfrutar de tu tiempo de la manera que prefieras, aquí tienes libertad:
               decide profesion o sector laboral, elige pareja, aprovecha oportunidades y conoce personas afines a
@@ -107,7 +147,7 @@ function dibujaHome(){
 
       </div>
       <div class="sidebar-menu">
-            <p>   Perfil </p><span>|</span><p>  Eventos    </p><span>|</span> <p>  Usuarios </p>
+           <p class="link">Perfil</p>   <p>|</p>   <p class="link">Eventos</p>   <p>|</p>   <p class="link">Usuarios</p> 
       </div>
       <div class="sidebar-footer">
           <div class="iconos">
@@ -123,14 +163,22 @@ function dibujaHome(){
   cont.innerHTML = home;
 
   setTimeout(() => {
-    Array.from(document.querySelectorAll(".sidebar-menu p")).forEach(element => {
+    Array.from(document.querySelectorAll(".sidebar-menu p.link")).forEach(element => {
         element.addEventListener('click', function (e){
             console.log(e.target.innerHTML);
-            Page.mostrarPagina(this.innerHtml);
+            if(e.target.innerHTML=="Perfil"){
+                Page.mostrarPagina("Perfil");
+            } else if (e.target.innerHTML=="Eventos"){
+                Page.mostrarPagina("Eventos");
+            } else if (e.target.innerHTML=="Usuarios"){
+                Page.mostrarPagina("Usuarios");
+            } else {
+                console.log("Error en el selector")
+            }
+            /*Page.mostrarPagina(e.target.innerHtml);*/
         })
     })
 },50);
 }
-
 
 

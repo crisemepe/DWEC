@@ -1,0 +1,74 @@
+[
+    {
+       "id_user": 1,
+       "nombre": "Hugo",
+       "nacim":"23-05-1995",
+       "ciudad":"barcelona",
+       "email":"hugo@correo.com",
+       "profesion": "diseñador",
+       "sexo":"hombre",
+       "quiero":"mismo",
+       "intereses":"juegos, creativo, viajes",
+       "foto":"./Graficos/user/1.png"
+    },
+    {
+        "id_user": 3,
+        "nombre":"Chloe",
+        "nacim":"14-03-1997",
+        "ciudad":"madrid",
+        "email":"chloe@correo.com",
+        "profesion": "estudiante",
+        "sexo":"mujer",
+        "quiero":"opuesto",
+        "intereses":"activo, aire_libre, animales",
+        "foto":"./Graficos/user/3.png"
+    },
+    {
+        "id_user":4,
+        "nombre":"Leo",
+        "nacim":"11-07-2000",
+        "ciudad":"valencia",
+        "email":"leo@correo.com",
+        "profesion": "administrativo",
+        "sexo":"hombre",
+        "quiero":"opuesto",
+        "intereses":"ninos, cuidado, casero",
+        "foto":"./Graficos/user/4.png"
+    },
+    {
+        "id_user":5,
+        "nombre":"Lily",
+        "nacim":"02-11-1993",
+        "ciudad":"donosti",
+        "email":"lily@correo.com",
+        "profesion": "enfermera",
+        "sexo":"mujer",
+        "quiero":"opuesto",
+        "intereses":"viajes, cocina, ninos",
+        "foto":"./Graficos/user/5.png"
+    },
+    {
+        "id_user":8,
+        "nombre":"Jack",
+        "nacim":"11-07-1998",
+        "ciudad":"sevilla",
+        "email":"jack@correo.com",
+        "profesion": "informatico",
+        "sexo":"hombre",
+        "quiero":"opuesto",
+        "intereses":"activo, juegos, cuidado",
+        "foto":"./Graficos/user/8.png"
+    },
+    {
+        "id_user":9,
+        "nombre":"Rose", 
+        "nacim":"17-02-1992",
+        "ciudad":"barcelona",
+        "email":"rose@correo.com",
+        "profesion": "profesora",
+        "sexo":"mujer",
+        "quiero":"mismo",
+        "intereses":"vegan, manitas, creativo",
+        "foto":"./Graficos/user/9.png"
+    }
+]
